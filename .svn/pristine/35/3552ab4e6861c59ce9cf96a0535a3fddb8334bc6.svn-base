@@ -1,0 +1,47 @@
+<!-- 考试分析详情 -->
+<view class="rank">
+  <view class="rank-head">
+    <image class="head-pic" src="{{studentInfo.userFace}}" />
+    <view class="head-info">
+      <text class="head-name">{{studentInfo.realname}}</text>
+      <text class="head-school">{{studentInfo.officeName}}</text>
+      <text class="head-class">{{studentInfo.gradeName}} {{studentInfo.className}}班</text>
+    </view>
+    <image class="head-img" wx:if="{{listItem.totalLevel == 3}}" src="../../../../images/scoreA.png" />
+    <image class="head-img" wx:if="{{listItem.totalLevel == 2}}" src="../../../../images/scoreB.png" />
+    <image class="head-img" wx:if="{{listItem.totalLevel == 1}}" src="../../../../images/scoreC.png" />
+    <image class="head-img" wx:if="{{listItem.totalLevel == 0}}" src="../../../../images/scoreD.png" />
+  </view>
+  <view class="rank-content">
+    <view class="content-font">
+      <text class="font-big" space="nbsp">得       分:</text>
+      <view class="font-small">
+        <text>{{listItem.studentScore}}</text>
+      </view>
+    </view>
+    <view class="content-font">
+      <text class="font-big" space="nbsp">班级平均:</text>
+      <view class="font-small">
+        <text>{{listItem.classAvgScore}}</text>
+      </view>
+    </view>
+    <view class="content-font">
+      <text class="font-big" space="nbsp">年级平均:</text>
+      <view class="font-small">
+        <text>{{listItem.gradeAvgScore}}</text>
+      </view>
+    </view>
+    <view class="content-font">
+      <text class="font-big" space="nbsp">班级排名:</text>
+      <view class="font-small">
+        <text>{{listItem.scoreClassRank}}</text>
+      </view>
+    </view>
+    <view class="content-font">
+      <text class="font-big" space="nbsp">年级排名:</text>
+      <view class="font-small">
+        <text>{{listItem.scoreGradeRank}}</text>
+      </view>
+    </view>
+  </view>
+</view>

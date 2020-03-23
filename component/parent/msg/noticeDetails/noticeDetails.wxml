@@ -1,0 +1,39 @@
+<!-- 公告 -->
+<view class="notice">		
+	<view class="swiperBox clearfix">
+		<view class="leftHand fl" style="opacity:{{leftOpacity}}"></view>
+		<swiper 
+			class="noticePage fl" 
+			bindchange="changeSwiper" 
+			vertical='{{false}}' 
+			autoplay="{{false}}" 
+			interval="2000" 
+			current="{{curIndex}}" 
+			duration="500"
+		>
+			<swiper-item class="noticeMain" wx:for="{{swiperList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+				<view class="title">{{item.title}}</view>
+				<view class="time">{{item.createDate}}</view>
+				<view class="content">
+					<view class="tit">学校全体师生:</view>
+					<view class="mian">{{item.content}}</view>
+				</view>
+			</swiper-item>
+		</swiper> 
+		<view class="rightHand fr" style="opacity:{{rightOpacity}}"></view>
+	</view>
+	<view class="notice-footer">
+		<view 
+			wx:for="{{noticeName}}" 
+			wx:for-item="item" 
+			wx:for-index="index" 
+			class="{{item.cur == noticeIndex ? 'active' : '' }}" 
+			data-type="{{item.cur}}" 
+			bind:tap="tabNotice"
+			wx:key="index"
+		>
+			{{item.name}}
+		</view>
+	</view>
+
+</view>

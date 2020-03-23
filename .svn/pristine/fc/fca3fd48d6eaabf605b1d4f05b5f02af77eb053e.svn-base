@@ -1,0 +1,106 @@
+/* component/parent/homework/homework.wxss */
+
+
+.workPage{
+  background:#f7f6fa;
+  height: 100%;
+  overflow: auto;
+	padding: 0 20rpx;
+}
+.section{
+	height: 56rpx;
+	background: #fff;
+	margin-top: 20rpx;
+	border-radius: 20rpx;
+}
+.picker{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 35rpx;
+	box-sizing: border-box;
+	font-size: 21rpx;
+}
+.picker>view{
+	height: 56rpx;
+	line-height: 56rpx;
+}
+.picker>view:nth-child(1){
+		display: flex;
+	align-items: center;
+
+}
+.dateIcon{
+	width: 31rpx;
+	height: 31rpx;
+	margin-right: 26rpx;
+}
+.dateRight{
+		width: 12rpx;
+	height: 22rpx;
+}
+.workMain{
+  height: 175rpx;
+  background: #fff;
+  margin: 20rpx auto 0;
+  border-radius: 10rpx;
+  font-size: 22rpx;
+}
+.workTop{
+  padding: 20rpx 38rpx 0 33rpx;
+  height: 90rpx;
+  position: relative;
+}
+.topLeft{
+  width: 33rpx;
+  height: 33rpx;
+  background: #f7f6fa;
+  border-radius:50%;
+  position: absolute;
+  left: -15rpx;
+  bottom:9rpx;  
+}
+.topRight{
+    width: 33rpx;
+  height: 33rpx;
+  background: #f7f6fa;
+  border-radius:50%;
+  position: absolute;
+  right: -15rpx;
+  bottom:9rpx; 
+}
+.workTitle{
+  font-size: 27rpx;
+  color: #333333;
+}
+.subject{
+  font-size: 23rpx;
+  color: #959595;
+  margin-top: 15rpx;
+}
+.workBottom{
+  border-top: 1rpx solid #f7f6fa;
+    height: 62rpx;
+    line-height: 62rpx;
+    color:#959595;
+}
+.workBottom view:nth-child(1){
+  margin-left: 36rpx;
+  margin-right: 18rpx;
+  width: 23rpx;
+  height: 23rpx;
+}
+.workBottom view:nth-child(1) image{
+    width: 23rpx;
+  height: 23rpx;
+}
+
+.workTopRight{
+  color: #fff;
+  background: #7ad1f6;
+  line-height: 37rpx;
+  text-align: center;
+  font-size: 23rpx;
+  width: 96rpx;
+  border-radius: 37rpx ;
+}

@@ -1,0 +1,23 @@
+<!-- 应用 -->
+<import src='../../../nav/nav' />
+<view class="flex fix_nav_wp">
+    <block wx:for="{{navData}}" wx:key="">
+        <template is="nav" data="{{...item}}" />
+    </block>
+</view>
+<view class="appPage">
+    <view class="appMain">
+        <view bindtap="homeWork">
+            <image src="../../../../images/studentWork.png"></image>
+        </view>
+        <view bindtap="wrong">
+            <image src="../../../../images/wrongQuestions.png"></image>
+        </view>
+        <view bindtap="class">
+            <image src="../../../../images/record.png"></image>
+        </view>
+        <view bindtap="testScore">
+            <image src="../../../../images/testScore.png"></image>
+        </view>
+    </view>
+</view>

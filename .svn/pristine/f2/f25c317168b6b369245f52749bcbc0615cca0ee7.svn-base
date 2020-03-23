@@ -1,0 +1,34 @@
+{
+	"pages": [
+		"pages/index/index",
+		"component/parent/msg/msg/msg",
+		"component/parent/msg/noticeDetails/noticeDetails",
+		"component/parent/msg/remind/remind",
+		"component/parent/application/application/application",
+		"component/parent/application/score/score",
+		"component/parent/application/homework/homework",
+		"component/parent/application/classMore/classMore",
+		"component/parent/application/wrong/wrong",
+		"component/parent/application/workDetails/workDetails",
+		"component/parent/application/rank/rank",
+		"component/parent/application/test/test",
+		"component/parent/mine/mine/mine",
+		"component/parent/mine/suggestion/suggestion",
+		"component/parent/mine/aboutUs/aboutUs",
+		"component/admin/learn/learn",
+		"component/admin/mine/aboutUs/aboutUs",
+		"component/admin/mine/mine",
+		"component/admin/resource/resource",
+		"component/admin/score/score",
+		"component/admin/mine/suggestion/suggestion",
+		"component/admin/user/user",
+		"component/admin/score/analysis/analysis"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "WeChat",
+		"navigationBarTextStyle": "black"
+	},
+	"sitemapLocation": "sitemap.json"
+}

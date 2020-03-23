@@ -1,0 +1,8 @@
+{
+		"navigationBarTitleText": "单次考试分析",
+		"navigationBarTextStyle": "white",
+		"navigationBarBackgroundColor": "#373e51",
+			"usingComponents": {
+				"ec-canvas": "../../../../ec-canvas/ec-canvas"
+			}
+}

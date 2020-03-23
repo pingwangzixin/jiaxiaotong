@@ -1,0 +1,4 @@
+<!-- 做题本 -->
+<view class="wrongPage">
+  <web-view src="{{htmlSrc}}" ></web-view>
+</view>

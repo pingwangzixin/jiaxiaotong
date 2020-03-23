@@ -1,0 +1,55 @@
+<!-- 课堂记录 -->
+<view class="morePage">
+
+  <view class="section">
+    <picker mode="date" value="{{date}}" start="2014-01-01" end="2029-12-31" bindchange="bindDateChange">
+      <view class="picker">
+        <view>
+          <image src="../../../../images/dateIcon.png" class="dateIcon"></image>
+          <text>{{date}}</text>
+        </view>
+        <view>
+          <image src="../../../../images/dateRight.png" class="dateRight"></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+
+  <view class="moreWrapper">
+    <view class="moreMain clearfix" wx:for="{{classMsg}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+      <view class="rightWrapper clearfix">
+        <view class="moreLeft">
+          <view class="startTime">
+            {{timeFrame[index]}}
+            <view class="imgDiv"></view>
+          </view>
+        </view>
+        <view class="moreRight fr">
+          <view class="moreTop">
+            <view class="teacher">
+              <view>{{item.subject}}</view>
+              <view>任教老师：{{item.teacher_name}}</view>
+            </view>
+            <view class="classStauts">
+              课堂状态: {{item.stuEval[0].eval_flag == 0?"优秀":item.stuEval[0].eval_flag == 1?"正常":item.stuEval[0].eval_flag == 2?"较差":""}}
+            </view>
+          </view>
+          <view class="moreBottom" wx:if="{{item.lesson.length!== 0}}">
+            <view class="interact">
+              <image src="../../../../images/jilu.jpg" class="jiluImg"></image>
+              <view>互动记录</view>
+            </view>
+            <view class="testWrapper">
+              <view class="testView" wx:for="{{item.lesson}}" data-items="{{child}}" wx:for-index="idx" wx:for-item="child" wx:key="idx" bindtap="toTest">
+                <view class="testImg">
+                  <image src="../../../../images/ceshiti.jpg" class="ceshitiImg"></image>
+                </view>
+                <view class="testDec">{{child.webmname}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

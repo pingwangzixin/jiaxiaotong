@@ -1,0 +1,19 @@
+/* component/parent/application/application.wxss */
+.appPage{
+  background: #f6f2f2;
+  overflow: auto;
+  height: 100%;
+	padding-bottom: 140rpx;
+	box-sizing: border-box;
+}
+
+.appMain>view{
+  width: 709rpx;
+  height: 250rpx;
+  margin: 20rpx auto 0;
+  overflow: hidden 
+}
+.appMain>view image{
+  width: 709rpx;
+  height: 250rpx;
+}

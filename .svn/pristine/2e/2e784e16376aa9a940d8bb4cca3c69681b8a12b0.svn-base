@@ -1,0 +1,33 @@
+<!--component/parent/aboutUs/aboutUs.wxml-->
+
+<view class="aboutPage">
+
+  <view>
+    <view class="top">
+      <image src="../../../../images/aboutLogo.png"></image>
+      <view>教讯通客户端</view>
+      <view>版本 1.0.1</view>
+    </view>
+  </view>
+  <view class="decView">
+    教讯通是由北京捷成世纪科技股份有限公司(以下简称捷成世纪)开发设计，捷成世纪是一家专注于创新型、科技型的国家高新技术企业，公司经过多年的发展已经在教育行业覆盖数百万用户和数千所学校及教育机构。
+  </view>
+  <view class="decView">
+    教师客户端是捷成世纪智慧教育云平台的重要组成部分，主要为家长提供对于孩子教育教学成长类的关注服务，能够让家长第一时间对孩子在学校、家庭、课外的表现做到全掌控，了解学校教学进度和学生学习进度，让家庭教育和学校教育进行有效的结合，从而共同促进孩子的成长。
+  </view>
+  <view class="decView">
+    捷成世纪始终以“为了每一个孩子的成长”为己任，做到一切为了孩子、为了一切孩子，让我们携手共同关注孩子在成长路上的点点滴滴，为了孩子的美好明天，捷成世纪将竭尽全力为您服务。
+  </view>
+
+
+  <view class="web">
+      http://yun.mdjedu.net           www.jetsen.cn
+  </view>
+
+  <view class="copy">
+      Copyright©2015-2016 Jetsen 版权所有  
+  </view>
+  <view class="jetsen">
+      北京捷成世纪科技股份有限公司
+  </view>
+</view>

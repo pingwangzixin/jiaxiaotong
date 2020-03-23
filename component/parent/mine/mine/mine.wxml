@@ -1,0 +1,41 @@
+<!--我的-->
+<import src='../../../nav/nav' />
+<!-- tabar -->
+<view class="flex fix_nav_wp">
+  <block wx:for="{{navData}}" wx:key="">
+    <template is="nav" data="{{...item}}" />
+  </block>
+</view>
+
+
+<view class="minePage">
+  <view class="mineTop">
+    <view class="mineTopLeft fl">
+           <view class="topName">{{studentInfo.realname}}     家长</view>
+           <view class="topClass">
+                   {{studentInfo.officeName}} {{studentInfo.gradeName}} {{studentInfo.className}}班
+           </view>  
+    </view>
+    <view class="userinfo-avatar fr">
+      <image src="{{parentInfo.userFace}}"></image>
+    </view>
+  </view>
+
+
+  <view class="mineMain">
+      <view class="clickMain" bindtap="suggestion">
+        <image src="../../../../images/yijian.png" class="mineImg"></image>
+        <text>意见反馈</text>
+       <image src="../../../../images/mineRight.png" class="mineRight"></image>
+      </view>
+      <view class="clickMain" bindtap="aboutUs">
+        <image src="../../../../images/aboutUs.png" class="mineImg"></image>
+        <text>关于我们</text>
+        <image src="../../../../images/mineRight.png" class="mineRight"></image>
+      </view>
+    
+  </view> 
+	 <view class="signOut" bindtap="signOut">
+        退出登录
+      </view>
+</view>

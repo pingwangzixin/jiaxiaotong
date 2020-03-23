@@ -1,0 +1,46 @@
+<!--学生作业-->
+
+<view class="workPage">
+
+  <view class="section">
+    <picker mode="date" value="{{date}}" start="2001-01-01" end="2099-01-01" bindchange="bindDateChange">
+      <view class="picker">
+        <view>
+          <image src="../../../../images/dateIcon.png" class="dateIcon"></image>
+          <text>{{date}}</text>
+        </view>
+				<view>
+          <image src="../../../../images/dateRight.png" class="dateRight"></image>
+				</view>
+
+      </view>
+    </picker>
+  </view>
+
+  <view class="workMain" wx:for="{{work}}" wx:for-index="index" wx:for-item="item" wx:key="index" bindtap="toWorkDetails" data-index="{{index}}">
+    <view class="workTop">
+      <view class="topLeft"></view>
+      <view class="topRight"></view>
+      <view class="workTopLeft fl">
+        <view class="workTitle">
+          {{item.homeworkName}}
+        </view>
+        <view class="subject">
+          学科: {{item.subName}}
+        </view>
+      </view>
+      <view class="workTopRight fr" >
+        {{item.hmtype == 0?"测试":"任务"}}
+      </view>
+    </view>
+
+    <view class="workBottom">
+      <view class="fl">
+        <image src="../../../../images/workTime.png"></image>
+      </view>
+      <view class="fl">完成时间：</view>
+      <view class="fl">{{item.deadlineTime}}</view>
+    </view>
+
+  </view>
+</view>

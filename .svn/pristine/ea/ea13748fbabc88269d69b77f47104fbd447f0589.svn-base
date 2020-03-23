@@ -1,0 +1,43 @@
+<!-- tabar -->
+<template name="nav">
+  <cover-view class="nav_link" bindtap="{{fn}}">
+    <cover-view class="tabBarImg">
+      <cover-image src="{{imgSrc}}"></cover-image>
+    </cover-view>
+
+    <cover-view wx:if="{{parent}}" class="{{current?'acticeTabar tabarName':'tabarName'}}">
+      {{name}}
+    </cover-view>
+    <cover-view wx:if="{{admin}}" class="admin">
+      {{name}}
+    </cover-view>
+  </cover-view>
+</template>
+
+
+
+<!-- 自定义导航栏 -->
+<template name="navigation">
+	<view class="navigationWrap" style="padding-top:{{statusBarHeight}}px">
+	</view>
+  <cover-view style="padding-top:{{statusBarHeight}}px" class="navigation">
+    <cover-view class="navigationText">
+     {{officeName}}
+    </cover-view>
+  </cover-view>
+
+
+</template>
+<!-- 表格开关 -->
+<template name="tableShow">
+  <view class="tableShow">
+    <view bindtap="{{fn}}">
+      <view class="fl">
+        {{flag?'收起表格':"展开表格"}}
+      </view>
+      <view class="fl">
+        <image src="{{flag?'../../../images/upImg.png':'../../../images/downImg.png'}}" class="arrowImg"></image>
+      </view>
+    </view>
+  </view>
+</template>

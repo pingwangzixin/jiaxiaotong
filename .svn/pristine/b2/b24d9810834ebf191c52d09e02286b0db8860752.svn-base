@@ -1,0 +1,114 @@
+<!-- 消息 -->
+<import src='../../../nav/nav' />
+<view class="msgPage">
+
+  <view class="msgTop clearfix">
+    <view class="msgTopLeft fl clearfix">
+      <view class="userinfo-avatar fl">
+        <image src="{{parentInfo.userFace}}"></image>
+      </view>
+      <view class="fl topName">
+        <view class="userinfo-nickname">{{studentInfo.realname}}</view>
+        <view>
+          {{studentInfo.officeName}} {{studentInfo.gradeName}} {{studentInfo.className}}班
+        </view>
+      </view>
+    </view>
+    <!-- <view class="msgTopRight fr">
+      <view>
+        <view class="lateImg">
+          <image src="../../../../images/msgLate.png"></image>
+        </view>
+        <view>AM 迟到</view>
+      </view>
+      <view>
+        <view class="lateImg">
+          <image src="../../../../images/msgLeave.png"></image>
+        </view>
+        <view>PM 早退</view>
+      </view>
+    </view> -->
+
+    <!-- 课堂记录 -->
+    <view class="msgClass">
+      <view class="noClass" wx:if="{{classMsg.length == 0}}">
+        <view>
+          <image src="../../../../images/noClass.png" class="noClassImg"></image>
+        </view>
+        <text>本节课程暂无内容哦~</text>
+      </view>
+      <view class="classWrapper" wx:if="{{classMsg.length !== 0}}">
+        <view class="classMain clearfix"  wx:for="{{classMsg}}" wx:for-index="index" wx:for-item="item" wx:key="index" bindtap="toClassMore">
+          <view class="fl">
+            <view class="className">{{item.subject}}</view>
+            <view class="classTime">11:00-11:45</view>
+          </view>
+          <view class="fr" wx:if="{{item.stuEval[0].eval_flag == 0}}">
+            <view>
+              <image src="../../../../images/magGood.png" class="classImg"></image>
+            </view>
+            <view>优秀</view>
+          </view>
+          <view class="fr" wx:if="{{item.stuEval[0].eval_flag == 1}}">
+            <view>
+              <image src="../../../../images/msgWell.png" class="classImg"></image>
+            </view>
+            <view>正常</view>
+          </view>
+          <view class="fr" wx:if="{{item.stuEval[0].eval_flag == 2}}">
+            <view>
+              <image src="../../../../images/msgBad.png" class="classImg"></image>
+            </view>
+            <view>较差</view>
+          </view>
+        </view>
+      </view>
+      <view class="classMore">
+        <view>
+          <image src="../../../../images/msgMore.png"></image>
+        </view>
+        <view bindtap="toClassMore">更多课堂记录</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 公告轮播 -->
+  <swiper class="notice" vertical='true' autoplay="true" interval="2000" circular='false' duration="500">
+    <block wx:for="{{noticeList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+      <swiper-item bindtap="noticeClick" id="{{index}}" data-type="{{item.type}}" data-id="{{item.id}}">
+        <view wx:if="{{item.type==8}}">
+          <image src="../../../../images/msgAdv.png" class="fl noticeImg"></image>
+        </view>
+        <view wx:if="{{item.type==7}}">
+          <image src="../../../../images/schoolIcon.png" class="fl noticeImg"></image>
+        </view>
+        <view class="fl">公告：</view>
+        <view class="fl noticeContent">{{item.title}}</view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 导学 -->
+  <view class="homeWork">
+    <view class="workTitle">导学·作业提醒</view>
+    <view class="workMain clearfix" wx:for="{{workMsg}}" wx:for-index="index" wx:for-item="item" wx:key="index" bindtap="toRemind" data-type='{{item.businessType}}' data-id="{{item.businessId}}">
+      <view class="workLeft fl ">
+        <image wx:if="{{item.businessType == 11}}" src="../../../../images/msgLearn.png" class="fl noticeImg"></image>
+        <image wx:if="{{item.businessType == 3}}" src="../../../../images/msgTask.png" class="fl noticeImg"></image>
+      </view>
+      <view class="workRight fl" style="padding-top:20rpx">
+        <view class="workT" style="margin-bottom:20rpx">{{item.businessName}}</view>
+        <!-- <view class="workDec">{{item.messageDescription}}</view> -->
+        <view class="workTime">{{item.createTime}}</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<!-- tabar -->
+<view class="flex fix_nav_wp">
+  <block wx:for="{{navData}}" wx:key="">
+    <template is="nav" data="{{...item}}" />
+  </block>
+</view>

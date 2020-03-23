@@ -1,0 +1,77 @@
+/* component/parent/mine/mine.wxss */
+.minePage{
+  height: 100%;
+  position: relative;
+}
+.mineTop{
+  background: #0c7bf1;
+  height: 300rpx;
+  padding: 20rpx 45rpx  0 52rpx;
+}
+
+
+.userinfo-avatar{
+    width: 132rpx;
+    height: 132rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4rpx #fff solid;
+}
+.userinfo-avatar image{
+      width: 132rpx;
+    height: 132rpx;
+}
+.topName{
+  font-size: 42rpx;
+  color: #fff;
+  margin: 40rpx 0  18rpx;
+}
+.topClass{
+  font-size: 23rpx;
+  color: #fff;
+}
+
+
+
+.mineMain{
+ height: 72%;
+  background: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-radius:30rpx;
+  padding: 24rpx 50rpx 0 45rpx; 
+  box-sizing: border-box;
+}
+.mineRight{
+  height: 26rpx;
+  width: 15rpx;
+  float: right;
+	margin-top: 28rpx;
+}
+.mineImg{
+  width: 26rpx;
+  height: 26rpx;
+  margin-right: 55rpx;
+}
+
+.clickMain{
+  font-size: 25rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+}
+
+
+.signOut{
+	text-align: center;
+	font-size: 25rpx;
+	width: 200rpx;
+	line-height: 60rpx;
+	background: #eee;
+	margin: 0 auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 140rpx;
+}

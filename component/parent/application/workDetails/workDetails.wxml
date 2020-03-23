@@ -1,0 +1,101 @@
+<!-- 学生作业详情（任务/测试） -->
+<view class="detailsPage">
+
+  <view class="workMain" wx:if="{{workInfo.hmtype == 1}}">
+    <view class="workTop">
+      <view class="topLeft"></view>
+      <view class="topRight"></view>
+      <view class="workTopLeft fl">
+        <view class="workTitle">{{workInfo.homeworkName}}</view>
+        <view class="subject">学科:{{workDetail.subName}}</view>
+      </view>
+    </view>
+    <view class="workBottom">
+      <view class="fl">
+        <image src="../../../../images/workTime.png"></image>
+      </view>
+      <view class="fl">完成时间：</view>
+      <view class="fl">{{workInfo.deadlineTime}}</view>
+    </view>
+  </view>
+
+  <!-- 任务 -->
+  <view wx:if="{{workInfo.hmtype == 1}}" class="taskMain">
+    <view>
+      <rich-text nodes="{{workDetail.content}}"></rich-text>
+    </view>
+    <view>
+      <view class="taskTitle">
+        附件
+        <text>(附件可在app或平台查看详细内容)</text>
+      </view>
+      <view class="taskImg" wx:for="{{workDetail.attachmentArray}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <image src="../../../../images/appVideo.png" wx:if="{{item.type==1}}"></image>
+        <image src="../../../../images/appMusic.png" wx:if="{{item.type==2}}"></image>
+        <image src="../../../../images/appJpg.png"   wx:if="{{item.type==3}}"></image>
+        <image src="../../../../images/appJpg.png"   wx:if="{{item.type==4}}"></image>
+        <image src="../../../../images/appPpt.png"   wx:if="{{item.type==5}}"></image>
+        <image src="../../../../images/appWord.png"  wx:if="{{item.type==6}}"></image>
+        <image src="../../../../images/appExcel.png" wx:if="{{item.type==7}}"></image>
+        <image src="../../../../images/appWeike.png" wx:if="{{item.type==8}}"></image>
+        <text>{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 测试 -->
+  <view wx:if="{{workInfo.hmtype == 0}}" class="testMain">
+    <web-view  src='{{htmlSrc}}'></web-view>
+   <!--  
+    <view class="radio" wx:for="{{workDetail.typeArray}}" wx:for-item='item' wx:for-index='index' wx:key='index'>
+      <view class="radioTitle" wx:if="{{item.typeId==2}}">一、单选题</view>
+      <view class="radioTitle" wx:if="{{item.typeId==4}}">二、多选题</view>
+      <view class="radioTitle" wx:if="{{item.typeId==1}}">三、判断题</view>
+      <view class="radioTitle" wx:if="{{item.typeId==9}}">四、综合题</view>
+      <view class="question" wx:for="{{item.questionArray}}" wx:for-item='sub' wx:for-index='num' wx:key='num'>
+        <view class="questionDec flexBox">
+          <view>{{num+1}}、</view>
+          <rich-text class="flexOne"  nodes="{{sub.body.question}}"></rich-text>
+        </view>
+        <view class="option">
+          <view class="flexBox">
+            <view>A、</view> 
+            <rich-text  class="flexOne" nodes="{{sub.body.option[0]}}"></rich-text>
+          </view>
+          <view class="flexBox">
+            <view>B、</view> 
+            <rich-text  class="flexOne" nodes="{{sub.body.option[1]}}"></rich-text>
+          </view>
+          <view class="flexBox">
+            <view>C、</view> 
+            <rich-text  class="flexOne" nodes="{{sub.body.option[2]}}"></rich-text>
+          </view>
+          <view class="flexBox">
+            <view>D、</view> 
+            <rich-text  class="flexOne" nodes="{{sub.body.option[3]}}"></rich-text>
+          </view>
+        </view>
+        <view class="answer">
+          <view class="answerShow" bindtap="answerShowChange" data-num="{{num}}" data-index="{{index}}">
+            <view wx:if="{{!sub.body.isChild}}">
+              <text>查看答案及释义</text>
+              <image src="../../../../images/parentDown.png"></image>
+            </view>
+            <view wx:if="{{sub.body.isChild}}">
+              <text>收起答案及释义</text>
+              <image src="../../../../images/parentUp.png"></image>
+            </view>
+          </view>
+          <view wx:if="{{sub.body.isChild}}">
+            <view>正确答案：{{sub.body.answer}}</view>
+            <view class="flexBox">
+              <view>解析：</view> 
+              <rich-text  class="flexOne" nodes="{{sub.body.analysis}}"></rich-text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+     -->
+  </view>
+</view>

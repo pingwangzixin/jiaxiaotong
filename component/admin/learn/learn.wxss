@@ -1,0 +1,197 @@
+.pageWrap{
+  height: 100%;
+  background: #373e51;
+}
+
+.learnPage{
+  background: #373e51;
+  padding: 0 24rpx 0;
+  padding-bottom: 140rpx;
+  box-sizing: border-box;
+}
+
+.tabWrapper{
+  width:680rpx;
+  display:flex;
+  margin:0 auto;
+  justify-content:space-around;
+  color: #fff;
+  line-height: 72rpx;
+  border-bottom: 1rpx solid #4a5474;
+}
+.tabWrapper>view{
+  padding:  0 15rpx;
+}
+.acticeTab{
+  color:#73ffe4;
+  background:#373e51;
+  border-bottom: 4rpx solid #73ffe4;
+}
+/* 课堂 */
+.classNumTotal{
+	background: #48506b;
+	height: 117rpx;
+	text-align: center;
+	margin-top: 20rpx;
+	font-size: 23rpx;
+	color: #c2c9cf;
+	border-radius: 10rpx;
+}
+.classNumTotal>view:nth-child(1){
+	font-size: 33rpx;
+	color: #fff;
+	padding: 9rpx 0;
+}
+.classNumTotal>view:nth-child(1)>text{
+		font-size: 44rpx;
+		font-weight: 900;
+		margin-right: 5rpx;
+}
+
+
+/* 作业 */
+.workLine{
+	 height: 440rpx;
+  width: 100%;
+}
+
+
+
+
+
+
+
+/* 教案 */
+.teacherBook{
+  text-align: center;
+}
+.teacherBook  .tableOneTr{
+  display: flex
+}
+.teacherBook .tableLeftOneTop {
+  width: 240rpx;
+  height: 63rpx;
+  color: #7ee1d6;
+  font-size: 22rpx;
+  background: #4d5673;
+  background-image: linear-gradient(14deg, transparent 49.5%, #697082 49.5%, #697082 50.5%, transparent 50.5%);
+}
+
+.teacherBook .tableLeftOneTop>view:nth-child(1) {
+  text-align: right;
+	padding: 7rpx 18rpx 0 0;
+
+}
+
+.teacherBook .tableLeftOneTop>view:nth-child(2) {
+  text-align: left;
+	padding: 0 0 11rpx 16rpx;
+}
+.teacherBook .tableOneTr>view:nth-child(2){
+  display: flex;
+}
+.teacherBook .tableOneTr>view:nth-child(2)>view{
+  width: 226rpx;
+  font-size: 24rpx;
+  line-height: 63rpx;
+  color: #7ee1d6;
+  background: #4d5673;
+  border-left: 1rpx solid #697082;
+
+}
+.teacherBook .tableMian{
+  display: flex
+}
+.teacherBook .tableMian>view:nth-child(2){
+  display: flex
+}
+.teacherBook .tableMian>view:nth-child(1){
+    width: 240rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  color: #7ee1d6;
+  font-size: 22rpx;
+  background: #4d5673;
+  border-top: 1rpx solid #697082;
+}
+.teacherBook .tableMian>view:nth-child(2)>view{
+  background: #57607f;
+  font-size: 20rpx;
+  color: #fff;
+  width: 226rpx;
+  line-height: 65rpx;
+  border-left: 1rpx solid #697082;
+  border-top: 1rpx solid #697082;
+}
+
+
+
+/* 教研活动 */
+
+
+.trendTitle {
+  color: #fff;
+  font-size: 25rpx;
+  margin-top: 20rpx;
+  margin-bottom: 15rpx;
+}
+
+.trendLine>image {
+  height: 453rpx;
+  width: 700rpx;
+}
+.researchTable{
+	display: flex;
+	text-align: center;
+	margin-top: 22rpx;
+}
+.researchTable .tableLeftOneTop {
+	width: 138rpx;
+  height: 63rpx;
+  color: #7ee1d6;
+  font-size: 17rpx;
+  background: #4d5673;
+  background-image: linear-gradient(23.4deg, transparent 49.5%, #697082 49.5%, #697082 50.5%, transparent 50.5%);
+  border-bottom: 1rpx solid #697082;
+
+}
+
+.researchTable .tableLeftOneTop>view:nth-child(1) {
+  text-align: right;
+	padding: 10rpx 13rpx 5rpx 0;
+}
+
+.researchTable .tableLeftOneTop>view:nth-child(2) {
+  text-align: left;
+	line-height: 20rpx;
+	padding-left: 6rpx;
+}
+.researchTable .tableLeftOneBtm{
+	height: 74rpx;
+	line-height: 74rpx;
+	width: 138rpx;
+  background: #4d5673;
+  font-size: 25rpx;
+  color: #7ee1d6;
+
+}
+.researchTable .tableMain>view:nth-child(1){
+  font-size: 23rpx;
+	line-height: 63rpx;
+  color: #7ee1d6;
+  height: 63rpx;
+  background: #4d5673;
+  border-bottom: 1rpx solid #697082;
+	border-left: 1rpx solid #697082;
+	width: 137rpx;
+}
+.researchTable .tableMain>view:nth-child(2){
+  font-size: 20rpx;
+  color: #fff;
+  background: #57607f;
+	border-left: 1rpx solid #697082;
+	width: 137rpx;
+		height: 74rpx;
+	line-height: 74rpx;
+
+}

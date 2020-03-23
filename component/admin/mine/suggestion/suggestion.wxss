@@ -1,0 +1,25 @@
+/* component/parent/suggestion/suggestion.wxss */
+
+.suggPage{
+  height: 100%;
+  background: #373e51;
+  overflow: hidden;
+}
+textarea{
+  width: 706rpx;
+  margin: 40rpx auto 45rpx;
+  background: #57607f;
+  font-size: 24rpx;
+  color: #fff;
+  border: 1rpx solid #a6e3e9;
+  padding:18rpx 11rpx;
+}
+button{
+  height: 70rpx;
+  line-height: 70rpx;
+  width: 450rpx;
+  text-align: center;
+  background: #44d1b6;
+  color: #fff;
+  border-radius: 50rpx;
+}

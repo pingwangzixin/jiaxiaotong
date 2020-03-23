@@ -1,0 +1,28 @@
+<!-- index.wxml -->
+<view class="indexPage">
+	<view class="remind">绑定前请确保您是牡丹江教育云平台的家长或学校管理员</view>
+  <form bindsubmit="userBind">
+    <view class="formWrapper">
+
+      <view class="imgWrap">
+        <image src="../../images/chatLogo.png" class="logo"></image>
+        <image src="../../images/indexChange.png" class="change"></image>
+        <image src="../../images/mudanLogo.png" class="logo"></image>
+      </view>
+
+      <view class="inputView">
+        <input name='user' value="{{user}}" placeholder="请输入云平台绑定的手机号" placeholder-class="place"></input>
+        <image src="../../images/indexCancel.png" bindtap="userCancel"></image>
+      </view>
+
+      <view class="inputView">
+        <input password="ture" name='psd' value="{{psd}}" placeholder="请输入密码" placeholder-class="place"></input>
+        <image src="../../images/indexCancel.png" bindtap="psdCancel"></image>
+      </view>
+
+      <button form-type="submit" class="bindBtn">绑定</button>
+
+    </view>
+  </form>
+  
+</view>

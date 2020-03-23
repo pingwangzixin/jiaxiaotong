@@ -1,0 +1,42 @@
+<!-- tabar -->
+<import src='../../nav/nav' />
+<cover-view class=" fix_nav_wp admin_tabar">
+  <block wx:for="{{navData}}" wx:key="">
+    <template is="nav" data="{{...item}}" />
+  </block>
+</cover-view>
+
+
+
+<view class="minePage">
+  <view class="mineTop">
+    <view class="mineTopLeft fl">
+           <view class="topName">{{adminInfo.realname}}</view>
+           <view class="topClass">
+                   {{adminInfo.officeName}}
+           </view>  
+    </view>
+    <view class="userinfo-avatar fr">
+      <image src="{{adminInfo.userFace}}"></image>
+    </view>
+  </view>
+
+
+  <view class="mineMain">
+      <view class="clickMain" bindtap="suggestion">
+        <image src="../../../images/admin_yijian.png" class="mineImg"></image>
+        <text>意见反馈</text>
+       <image src="../../../images/admin_right.png" class="mineRight"></image>
+      </view>
+      <view class="clickMain" bindtap="aboutUs">
+        <image src="../../../images/admin_aboutUs.png" class="mineImg"></image>
+        <text>关于我们</text>
+        <image src="../../../images/admin_right.png" class="mineRight"></image>
+      </view>
+  
+  
+  </view> 
+		 <view class="signOut" bindtap="signOut">
+        退出登录
+      </view>
+</view>

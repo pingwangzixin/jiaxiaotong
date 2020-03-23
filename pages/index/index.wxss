@@ -1,0 +1,65 @@
+/**index.wxss**/
+.indexPage{
+	overflow: hidden
+}
+.remind{
+	margin: 50rpx auto  80rpx;
+	line-height: 20rpx;
+	font-size: 28rpx;
+	text-align: center;
+	color: #888;
+}
+.formWrapper{
+	width: 552rpx;
+	margin: 150rpx auto 0;
+}
+form{
+	overflow: hidden
+}
+.imgWrap{
+	width: 480rpx;
+	margin: 0 auto 80rpx;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.imgWrap .logo{
+	width: 138rpx;
+	height: 138rpx;
+}
+.imgWrap .change{
+	width: 50rpx;
+	height: 40rpx;
+}
+.inputView{
+	position: relative;
+}
+.inputView>image{
+	position: absolute;
+	width: 28rpx;
+	height: 28rpx;
+	right: 20rpx;
+	top: 25rpx;
+	z-index: 100
+}
+input{
+	margin-bottom: 20rpx;
+	height: 80rpx;
+	line-height: 80rpx;
+	box-shadow: 0rpx 0rpx 5rpx 5rpx #efefef;
+	border-radius: 20rpx;
+	padding-left: 25rpx;
+	box-sizing: border-box;
+}
+.place{
+	font-size: 20rpx;
+	color: #c3c2c8;
+}
+.bindBtn{
+	background: #26cad3;
+	color: #fff;
+	height: 80rpx;
+	line-height: 80rpx;
+	border-radius: 40rpx;
+	margin-top: 80rpx;
+	}

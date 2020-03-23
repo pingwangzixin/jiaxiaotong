@@ -1,0 +1,214 @@
+<view class="pageWrap">
+
+  <view class="learnPage">
+    <!-- 自定义导航栏 -->
+    <!-- <template is="navigation" data="{{...schoolInfo}}" /> -->
+    <template is="navigation" data="{{...adminInfo}}" />
+
+
+    <view class="tabWrapper">
+      <view wx:for="{{tab}}" wx:for-index="index" wx:for-item="item" wx:key="index" class="{{tabIndex == index ? 'acticeTab':''}}" bindtap="tabChange" id="{{index}}">
+        {{item}}
+      </view>
+    </view>
+    <!-- 课堂 -->
+    <view hidden="{{tabIndex != 0}}">
+      <view class="classNumTotal">
+        <view>
+          <text>{{lessonTotal}}</text>节
+        </view>
+        <view>课堂建设总量</view>
+      </view>
+      <view class="trend">
+        <view class="trendTitle">
+          课堂量统计趋势图
+        </view>
+        <view class="workLine">
+          <ec-canvas id="lessonChart" canvas-id="mychart-line" ec="{{ lessonLine }}"></ec-canvas>
+        </view>
+        <view class="trendTitle">
+          课堂量统计表
+        </view>
+        <view class="researchTable" wx:for="{{lessonData}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view>
+            <view class="tableLeftOneTop">
+              <view>
+                月份
+              </view>
+              <view>
+                课堂
+              </view>
+            </view>
+            <view class="tableLeftOneBtm">
+              节数
+            </view>
+          </view>
+          <view class="tableMain" wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">
+            <view>{{child.month}}月</view>
+            <view>{{child.count}}</view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+
+    <!-- 作业 -->
+    <view hidden="{{tabIndex != 1}}">
+      <view class="classNumTotal">
+        <view>
+          <text>{{workTotal}}</text>份
+        </view>
+        <view>作业建设总量</view>
+      </view>
+      <view class="trend">
+        <view class="trendTitle">
+          课堂量统计趋势图
+        </view>
+        <view class="workLine">
+          <ec-canvas id="workchart" canvas-id="mychart-line" ec="{{ workLine }}"></ec-canvas>
+        </view>
+        <view class="trendTitle">
+          课堂量统计表
+        </view>
+        <view class="researchTable" wx:for="{{workData}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view>
+            <view class="tableLeftOneTop">
+              <view>
+                月份
+              </view>
+              <view>
+                课堂
+              </view>
+            </view>
+            <view class="tableLeftOneBtm">
+              份数
+            </view>
+          </view>
+          <view class="tableMain" wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">
+            <view>{{child.month}}月</view>
+            <view>{{child.count}}</view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+
+
+    <!-- 教案 -->
+    <view hidden="{{tabIndex != 2}}">
+      <view class="classNumTotal">
+        <view>
+          <text>{{planTotal}}</text>份
+        </view>
+        <view>教案建设总量</view>
+      </view>
+      <view class="trend">
+        <view class="trendTitle">
+          教案量统计趋势图
+        </view>
+        <view class="workLine">
+          <ec-canvas id="planLine" canvas-id="mychart-line" ec="{{ planLine }}"></ec-canvas>
+        </view>
+        <view class="trendTitle">
+          教案量统计表
+        </view>
+        <view class="teacherBook">
+          <view class="tableOneTr">
+            <view class="tableLeftOneTop">
+              <view>
+                教案
+              </view>
+              <view>
+                月份
+              </view>
+            </view>
+            <view>
+              <view>
+                集体教案
+              </view>
+              <view>
+                个人教案
+              </view>
+
+            </view>
+          </view>
+          <view class="tableMian" wx:for="{{personData}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+            <view>{{item.month}}月</view>
+            <view>
+              <view>{{teamData[index].count}}</view>
+              <view>{{item.count}}</view>
+            </view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+    <!-- 教研活动 -->
+    <view hidden="{{tabIndex != 3}}">
+      <view class="classNumTotal">
+        <view>
+          <text>{{activeTotal}}</text>次
+        </view>
+        <view>教研建设总量</view>
+      </view>
+      <view class="trend">
+        <view class="trendTitle">
+          教研活动量统计趋势图
+        </view>
+        <view class="workLine">
+          <ec-canvas id="activechart" canvas-id="mychart-line" ec="{{ activeLine }}"></ec-canvas>
+        </view>
+        <view class="trendTitle">
+          教研活动量统计表
+        </view>
+        <view class="researchTable" wx:for="{{activeData}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view>
+            <view class="tableLeftOneTop">
+              <view>
+                月份
+              </view>
+              <view>
+                教研活动
+              </view>
+            </view>
+            <view class="tableLeftOneBtm">
+              节数
+            </view>
+          </view>
+          <view class="tableMain" wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">
+            <view>{{child.month}}月</view>
+            <view>{{child.count}}</view>
+          </view>
+
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- tabar -->
+<import src='../../nav/nav' />
+<import src='../../../pages/index/index' />
+<cover-view class=" fix_nav_wp admin_tabar">
+  <block wx:for="{{navData}}" wx:key="">
+    <template is="nav" data="{{...item}}" />
+  </block>
+</cover-view>

@@ -1,0 +1,102 @@
+/**app.wxss**/
+
+page{
+  height: 100%;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.clearfix{zoom:1;}
+.fl{float: left;}
+.fr{float: right;}
+
+/* 自定义tabar的样式 */
+.fix_nav_wp{
+   position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  background: #fff;
+  height: 120rpx;
+  justify-content: space-around;
+  border-top: 1rpx solid #e7e7e7;
+  z-index: 100;
+}
+.fix_nav_wp>cover-view{
+	width: 200rpx;
+	text-align: center;
+}
+.admin_tabar{
+  background: #262b39;
+  border: none;
+}
+.tabBarImg{
+  margin: 16rpx auto  10rpx;
+  text-align: center;
+}
+.tabarName{
+  font-size: 21rpx;
+}
+.tabBarImg cover-image{
+   width: 41rpx;
+  height: 41rpx;
+	margin: 0 auto;
+
+}
+.acticeTabar{
+  color: #3965ff;
+}
+.admin{
+  color:#f5f5f6;
+   font-size: 21rpx;
+}
+/* 自定义导航栏的样式 */
+.navigationWrap{
+	height: 80rpx;
+		padding-bottom: 10rpx;
+}
+.navigation{
+  height: 80rpx;
+  background: #373e51;
+  color: #fff;
+  padding-left: 20rpx;
+	padding-bottom: 10rpx;
+  font-size: 35rpx;
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+.navigationText{
+	line-height: 80rpx;
+}
+
+
+
+/* 公用表格开关的样式 */
+
+.tableShow {
+  position: relative;
+  width: 100%;
+  height: 25rpx;
+  margin-bottom: 10rpx;
+}
+
+.tableShow>view {
+  color: #73ffe4;
+  font-size: 22rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 0;
+}
+
+.arrowImg{
+    width: 30rpx;
+    height: 17rpx;
+}

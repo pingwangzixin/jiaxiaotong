@@ -1,0 +1,118 @@
+/* component/parent/score/score.wxss */
+.pageWrap{
+  height: 100%;
+  background: #f4f6fc;
+}
+.scorePage {
+  background: #f4f6fc;
+  padding: 20rpx 20rpx 10rpx 20rpx;
+}
+
+.scoreLine {
+  background: #fff;
+  border: 1rpx solid #e4eafc;
+  border-radius: 10rpx;
+  padding-top: 13rpx;
+	padding-bottom: 22rpx;
+	margin-bottom: 19rpx;
+}
+
+.scoreLine>view:nth-child(1) {
+  font-size: 26rpx;
+  margin: 0 10rpx 10rpx;
+}
+
+.LineWrapper {
+  height: 360rpx;
+  width: 100%;
+}
+
+
+.scoreTableFlag>view {
+  color: #1644ed;
+}
+.scoreTableWrapper{
+	padding: 0 13rpx;
+}
+
+/* 表格样式 */
+.scoreTable {
+  margin: 20rpx auto 24rpx;
+	font-size: 23rpx;
+	width: 673rpx;
+}
+.scoreTable>view {
+  display: flex;
+  text-align: center;
+}
+.scoreTable>.top{
+	border-top: 1rpx solid #dddddd; 
+	align-items: stretch;
+	background: #f9fafd;
+}
+.top>view{
+	padding: 16rpx 23rpx  19rpx;
+}
+.scoreTable>view>view{
+	width: 180rpx;
+	border-right: 1rpx solid #dddddd; 
+	border-bottom: 1rpx solid #dddddd; 
+	flex-grow: 1;
+}
+.scoreTable>view>view:nth-child(1){
+	border-left: 1rpx solid #dddddd;
+	width: 128rpx;
+	flex-shrink: 0;
+	flex-grow: 0;
+	padding: 0;
+}
+.tableMain{
+	line-height: 74rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.scoreMain {
+  background: #fff;
+	padding: 21rpx 12rpx 20rpx 20rpx;
+	border-radius: 10rpx;
+}
+.examAnalysis {
+  background-color: #139AB7;
+  height: 177rpx;
+  font-size: 22rpx;
+  color: #fff;
+  line-height: 36rpx;
+  padding: 35rpx 17rpx 10rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+  border-radius: 5rpx;
+  position: relative;
+}
+.examAnalysis view{margin: 15rpx auto;}
+.examAnalysis image{width: 230rpx;height: 240rpx;position: absolute;right: 10rpx;top: -23rpx;}
+.tableTitle{
+	font-size: 24rpx;
+	margin-bottom: 22rpx;
+}
+.tableImg{
+width: 23rpx;
+height: 23rpx;
+}

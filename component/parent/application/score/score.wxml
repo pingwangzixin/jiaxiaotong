@@ -1,0 +1,69 @@
+<!-- 考试分析 -->
+<view class="pageWrap">
+  <view class="scorePage">
+    <view class="scoreLine">
+      <view>成绩趋势图</view>
+      <view class="LineWrapper">
+        <ec-canvas id="mychart" canvas-id="mychart-line" ec="{{ ecLine }}"></ec-canvas>
+      </view>
+      <view>
+        <view class="tableShow scoreTableFlag">
+          <view bindtap="scoreTableShow">
+            <view class="fl">{{scoreFlag?'收起表格':"展开表格"}}</view>
+            <view class="fl">
+              <image src="{{scoreFlag?'../../../../images/parentUp.png':'../../../../images/parentDown.png'}}" class="arrowImg"></image>
+            </view>
+          </view>
+        </view>
+        <view class="scoreTableWrapper">
+          <view class="scoreTable" wx:if="{{scoreFlag}}" wx:for="{{scoreList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+            <view class="top">
+              <view>
+              </view>
+					<view wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">{{child.examName}}</view>
+            </view>
+            <view class="tableMain">
+              <view>班级均分</view>
+					<view wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">{{child.classAvgScore}}</view>
+            </view>
+            <view class="tableMain">
+              <view>年级均分</view>
+					<view wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">{{child.gradeAvgScore}}</view>
+            </view>
+            <view class="tableMain">
+              <view>我的分数</view>
+					<view wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">{{child.studentScore}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="scoreMain">
+      <view class="tableTitle">排名变化表</view>
+      <view class="scoreTable" wx:for="{{scoreList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view class="top">
+          <view>
+          </view>
+					<view wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">{{child.examName}}</view>
+        </view>
+        <view class="tableMain">
+          <view>班级排名</view>
+            <view wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">{{child.scoreClassRank}}</view>
+        </view>
+        <view class="tableMain">
+          <view>年级排名</view>
+            <view wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">{{child.scoreGradeRank}}</view>
+        </view>
+      </view>
+      <view class="tableTitle">单次考试分析</view>
+      <view class="examAnalysis" wx:for="{{singleExamAnalysis}}" data-listitem="{{item}}" wx:for-index="index" wx:for-item="item" wx:key="index" bindtap="toRank">
+        <view>{{item.examName}}</view>
+        <view>得分：{{item.studentScore}}</view>
+        <image wx:if="{{item.totalLevel == 3}}" src="../../../../images/listA.png" />
+        <image wx:if="{{item.totalLevel == 2}}" src="../../../../images/listB.png" />
+        <image wx:if="{{item.totalLevel == 1}}" src="../../../../images/listC.png" />
+        <image wx:if="{{item.totalLevel == 0}}" src="../../../../images/listD.png" />
+      </view>
+    </view>
+  </view>
+</view>

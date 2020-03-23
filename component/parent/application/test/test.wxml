@@ -1,0 +1,11 @@
+<!-- 课堂记录详情（视频/试题） -->
+<view class="test">
+  <!-- video -->
+  <view class="test-video" wx:if="{{showType=='video'}}">
+    <video class='video' autoplay  src="{{videoSrc}}" ></video>
+  </view>
+  <!-- html -->
+  <view class="test-html" wx:if="{{showType=='quiz'}}">
+    <web-view  src='{{htmlSrc}}'></web-view>
+  </view>
+</view>

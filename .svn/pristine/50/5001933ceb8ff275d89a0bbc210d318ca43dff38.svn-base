@@ -1,0 +1,156 @@
+/* component/admin/user/user.wxss */
+.pageWrap{
+  height: 100%;
+  background: #373e51;
+}
+.userPage {
+  background: #373e51;
+  padding: 0 24rpx 0;
+  padding-bottom: 140rpx;
+  box-sizing: border-box;
+}
+
+.userNum {
+  width: 692rpx;
+  margin: 24rpx auto;
+  background: #48506b;
+  border-radius: 10rpx;
+  box-shadow: 0px 0px 10rpx #2d3343;
+}
+
+.numTop {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 142rpx;
+  padding: 26rpx 0 30rpx;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #c2c9cf;
+}
+
+.numTop>view:nth-of-type(1) {
+  margin-right: 70rpx;
+}
+
+.userN {
+  font-size: 45rpx;
+  color: #fff;
+  font-weight: 900;
+}
+
+.userDec {
+  font-size: 22rpx;
+  color: #c2c9cf;
+}
+
+.numBtm {
+  display: flex;
+  justify-content: space-around;
+  font-size: 22rpx;
+  color: #c2c9cf;
+}
+
+.numBtm>view>view:nth-of-type(1) {
+  font-size: 40rpx;
+  color: #73ffe4;
+  margin: 40rpx 0 0rpx;
+  font-weight: 900;
+}
+
+.numBtm>view>view:nth-of-type(3)>text {
+  color: #fff;
+}
+
+.numBtm>view>view:nth-of-type(3) {
+  margin: 10rpx 0 30rpx;
+}
+
+.timeTitle {
+  color: #fff;
+  font-size: 25rpx;
+  margin-bottom: 40rpx;
+}
+
+.timeLine {
+  height: 350rpx;
+	  width: 655rpx;
+}
+
+.timeLine>image {
+  height: 325rpx;
+  width: 655rpx;
+}
+
+.timeTable {
+  text-align: center;
+  margin: 28rpx 0;
+}
+
+.tableLeftOneTop {
+  width: 138rpx;
+  height: 63rpx;
+  color: #7ee1d6;
+  font-size: 22rpx;
+  background: #4d5673;
+  background-image: linear-gradient(24deg, transparent 49.5%, #697082 49.5%, #697082 50.5%, transparent 50.5%);
+}
+
+.tableLeftOneTop>view:nth-child(1) {
+  text-align: right;
+  padding-right: 8rpx;
+  padding-top: 7rpx;
+}
+
+.tableLeftOneTop>view:nth-child(2) {
+  text-align: left;
+  text-indent: 8rpx;
+	line-height: 1;
+}
+
+.tableTitle {
+  display: flex;
+}
+
+.tableTitle>view:nth-child(2) {
+  display: flex;
+}
+
+.tableTitle>view:nth-child(2)>view {
+  width: 180rpx;
+  height: 63rpx;
+  line-height: 63rpx;
+  border-left: 1rpx solid #697082;
+  background: #4d5673;
+    color: #7ee1d6;
+  font-size: 24rpx;
+}
+
+.tableMain {
+  display: flex;
+}
+
+.tableMain>view:nth-child(1) {
+  width: 138rpx;
+  height: 74rpx;
+  line-height: 74rpx;
+  background: #4d5673;
+  border-top: 1rpx solid #697082;
+  color: #7ee1d6;
+  font-size: 23rpx;
+}
+
+.tableMain>view:nth-child(2) {
+  display: flex;
+}
+
+.tableMain>view:nth-child(2)>view {
+  width: 180rpx;
+  height: 74rpx;
+  background: #57607f;
+  line-height: 74rpx;
+  color: #fff;
+  font-size: 20rpx;
+  border: 1rpx solid #697082;
+  border-right: none;
+  border-bottom: none;
+}

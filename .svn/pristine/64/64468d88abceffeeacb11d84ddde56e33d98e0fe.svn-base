@@ -1,0 +1,192 @@
+/* component/admin/score/score.wxss */
+.pageWrap{
+  background: #373e51;
+  height: 100%;
+}
+.scorePage {
+  background: #373e51;
+  padding: 0 24rpx 0;
+  padding-bottom: 140rpx;
+}
+
+.scrollWrap{
+	display: flex;
+}
+.imgWrap{
+	background: #4d5673;
+	height: 52rpx;
+	width: 52rpx;
+	text-align: center;
+}
+.scrollWrap>view>image{
+	width: 31rpx;
+	height: 17rpx;
+	margin-top: 18rpx;
+}
+scroll-view{
+	width: 657rpx;
+	display: flex;
+  border-bottom: 1rpx solid #4a5474;
+  border-top: 1rpx solid #4a5474;
+  color: #fff;
+  line-height: 50rpx;
+	height: 50rpx;
+}
+.gradView{
+	margin-right: 30rpx;
+	flex-shrink: 0;
+	  padding: 0 15rpx;
+  font-size: 25rpx;
+}
+.acticeView {
+  color: #73ffe4;
+  background: #373e51;
+  border-bottom: 4rpx solid #73ffe4;
+}
+.gradChoice{
+	background: #4d5673;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 40rpx 0 25rpx;
+}
+.gradChoice>view{
+	width: 153rpx;
+	height: 52rpx;
+	line-height: 52rpx;
+	font-size: 24rpx;
+	margin-bottom: 15rpx;
+	text-align: center;
+	color: #fff;
+	background: #525b78;
+	border-radius: 20rpx;
+	letter-spacing: 4rpx;
+}
+.gradChoice .acticeChoice{
+	background: #2be1be;
+}
+
+
+
+.tabWrapper {
+  width: 680rpx;
+  display: flex;
+  margin: 30rpx auto 0;
+  justify-content: space-around;
+
+
+}
+
+
+
+.trend {
+  margin-top: 24rpx;
+}
+
+.trendTitle {
+  color: #fff;
+  font-size: 25rpx;
+  margin-bottom: 12rpx;
+}
+.echartBtn{
+	padding: 0 100rpx;
+	display: flex;
+	justify-content: space-between;
+	font-size: 24rpx;
+	color: #a4a4ae;
+}
+.activeBtn{
+	color: #70f6dd;
+	border-bottom: 4rpx solid #70f6dd;
+	white-space:nowrap;
+}
+/* echarts */
+.avgChart{
+	height: 450rpx;
+}
+
+/* 表格样式 */
+.scoreTable{
+		font-size: 24rpx;
+		text-align: center;
+		margin-bottom: 10rpx;
+}
+
+.tabletop{
+		display: flex;
+		background: #4d5673;
+		color: #73ffe4;
+	align-items: stretch;
+}
+.tabletop>view{
+	border-left: 1rpx solid #697082;
+	flex-grow: 1;
+		width: 180rpx;
+		padding: 10rpx 20rpx;
+}
+.tableBtm{
+	color: #fff;
+	display: flex;
+	background: #57607f;
+	height: 74rpx;
+	line-height: 74rpx;
+		border-top: 1rpx solid #697082;
+
+}
+.tableBtm>view{
+	width: 180rpx;
+		border-left: 1rpx solid #697082;
+	flex-grow: 1;
+}
+.scoreTable>view>view:nth-child(1){
+	width: 138rpx;
+	color: #73ffe4;
+	background: #4d5673;
+	border-left: none;
+	flex-shrink: 0;
+	flex-grow: 0;
+	padding: 0;
+}
+
+/* 单次考试分析 */
+.analysisTitle {
+  color: #fff;
+  font-size: 25rpx;
+  margin: 12rpx 0;
+}
+
+.examMain {
+  background: #4d5673;
+  border-radius: 10rpx;
+  padding: 18rpx 0 19rpx 24rpx;
+  box-sizing: border-box;
+  margin-bottom: 17rpx;
+  box-shadow: 0 0 10rpx #2d3343;
+}
+
+.examTitle {
+  font-size: 25rpx;
+  color: #73ffe4;
+}
+
+.examTime {
+  font-size: 18rpx;
+  color: #a4a4ae;
+  margin: 15rpx 0;
+}
+
+.examAverage, .examSubject {
+  font-size: 19rpx;
+  color: #fff;
+}
+.examSubject>text{
+	margin-right: 10rpx;
+}
+.examAverage>text:nth-of-type(1) {
+  margin-right: 30rpx;
+}
+
+.examSubject {
+  margin: 15rpx 0;
+}
+

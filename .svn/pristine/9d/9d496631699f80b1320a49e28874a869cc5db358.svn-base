@@ -1,0 +1,154 @@
+/* component/parent/classMore/classMore.wxss */
+
+
+.morePage{
+  background: #f7f6fa;
+  height: 100%;
+  padding-top: 30rpx;
+}
+.moreWrapper{
+  background: #f7f6fa;
+  padding: 40rpx 56rpx  0 46rpx;
+  overflow: hidden;
+}
+
+.rightWrapper{
+  width: 470rpx;
+  float: right;
+  border-left: 1rpx solid #7ad1f6;
+  padding-bottom: 40rpx;
+  position: relative;
+}
+.moreLeft{
+  width: 170rpx;
+  position: absolute;
+  left:-170rpx;
+  top: -5rpx;
+}
+.startTime{
+  font-size: 22rpx;
+  color: #7ad1f6;
+  width: 100%;
+}
+.imgDiv{
+  background: #7ad1f6;
+  border: 4rpx solid #fff;
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: -12rpx;
+  top:2rpx;
+}
+
+
+.moreRight{
+  width: 415rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx 18rpx 30rpx 20rpx;
+  box-sizing: border-box;
+
+}
+
+
+.teacher{
+  display: flex;
+  justify-content: space-between;
+
+}
+.teacher>view:nth-child(1){
+  font-size: 26rpx;
+  color: #333333;
+}
+.teacher>view:nth-child(2){
+  font-size: 21rpx;
+  color: #666666;
+}
+
+.moreBottom{
+  border-top: 1rpx solid #dddddd;
+}
+.interact{
+  height: 30rpx;
+  margin-top:20rpx; 
+}
+.interact image{
+  float: left;
+  margin: 2rpx 13rpx 0 0;
+}
+.interact view{
+  font-size: 25rpx;
+  float: left;
+
+}
+.classStauts{
+  font-size: 21rpx;
+   color: #666666;
+   margin: 32rpx 0;
+}
+.jiluImg{
+  width: 25rpx;
+  height: 25rpx;
+}
+.ceshitiImg{
+  width: 60rpx;
+  height: 60rpx;
+}
+.testWrapper{
+  display: flex;
+  flex-wrap:wrap;
+  width: 100%; 
+  justify-content: space-between;
+}
+.testView{
+  width: 33%;
+  height: 100rpx;
+  margin-top: 32rpx;
+  text-align: center;
+}
+.testDec{
+  font-size: 20rpx;
+  color: #959595;
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+
+
+}
+
+
+.section{
+  width: 85%;
+	height: 56rpx;
+	background: #fff;
+	margin-top: 20rpx;
+  border-radius: 20rpx;
+  margin: 0 auto;
+}
+.picker{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 35rpx;
+	box-sizing: border-box;
+	font-size: 21rpx;
+}
+.picker>view{
+	height: 56rpx;
+	line-height: 56rpx;
+}
+.picker>view:nth-child(1){
+	display: flex;
+	align-items: center;
+
+}
+.dateIcon{
+	width: 31rpx;
+	height: 31rpx;
+	margin-right: 26rpx;
+}
+.dateRight{
+	width: 12rpx;
+	height: 22rpx;
+}

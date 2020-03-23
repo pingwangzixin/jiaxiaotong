@@ -1,0 +1,118 @@
+<view class="pageWrap">
+  <view class="analysisPage">
+    <view class="pageTitle">
+      <view>{{examInfo.examName}}</view>
+      <view>{{examInfo.exam_date}}</view>
+    </view>
+    <view class="dataShow">
+      <view>
+        <text>年级平均分</text>
+        <text>{{examInfo.gradeAvgScore}}</text>
+      </view>
+      <view>
+        <text>年级合格率</text>
+        <text>{{examInfo.passNumLv}}</text>
+      </view>
+      <view>
+        <text>年级优秀率</text>
+        <text>{{youLv}}%</text>
+      </view>
+      <view>
+        <text>年级最高分</text>
+        <text>{{examInfo.max}}</text>
+      </view>
+    </view>
+    <view class="echartsView">
+      <view class="echartBtn">
+        <view wx:for="{{['及格率趋势图', '优良率趋势图', '离均差统计图']}}" wx:for-index="index" wx:for-item="item" class="{{index==activeIndex?'activeBtn':''}}" bindtap="btnClick" data-index="{{index}}" wx:key="index">{{item}}</view>
+      </view>
+    </view>
+    <!-- 离均差统计表 -->
+    <view hidden="{{activeIndex!==2}}">
+      <view class="ChartView">
+        <ec-canvas id="avgChart" canvas-id="mychart-line" ec="{{ avgChart }}"></ec-canvas>
+      </view>
+      <view class="researchTable"  wx:for="{{avgList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view>
+          <view class="tableLeftOneTop">
+            <view>
+              班级
+            </view>
+            <view>
+              离均差
+            </view>
+          </view>
+          <view class="tableLeftOneBtm">
+            差值
+          </view>
+        </view>
+        <view class="tableMain" wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">
+          <view>{{child.name}}</view>
+          <view>{{child.type=='no score'?'暂无数据':child.avgDeviation}}</view>
+        </view>
+      </view>
+    </view>
+
+
+    <!-- 优良率趋势表 -->
+    <view hidden="{{activeIndex!==1}}">
+      <view class="ChartView">
+        <ec-canvas id="wellChart" canvas-id="mychart-line" ec="{{ wellChart }}"></ec-canvas>
+      </view>
+      <view class="researchTable" wx:if="{{activeIndex==1}}" wx:for="{{classList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view>
+          <view class="tableLeftOneTop">
+            <view>
+              班级
+            </view>
+            <view>
+              优良率
+            </view>
+          </view>
+          <view class="tableLeftOneBtm" wx:for="{{['优秀', '良好', '中等','关注']}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+            {{item}}
+          </view>
+        </view>
+        <view class="tableMain" wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">
+          <view>{{child}}</view>
+          <view>{{youArr[index][idx].y?youArr[index][idx].y+'%':youArr[index][idx].y}}</view>
+          <view>{{liangArr[index][idx].y?liangArr[index][idx].y+'%':liangArr[index][idx].y}}</view>
+          <view>{{zhongArr[index][idx].y?zhongArr[index][idx].y+'%':zhongArr[index][idx].y}}</view>
+          <view>{{guanArr[index][idx].y?guanArr[index][idx].y+'%':guanArr[index][idx].y}}</view>
+        </view>
+      </view>
+
+
+    </view>
+
+    <!-- 及格率趋势表 -->
+    <view hidden="{{activeIndex!==0}}">
+      <view class="ChartView">
+        <ec-canvas id="passChart" canvas-id="mychart-line" ec="{{ passChart }}"></ec-canvas>
+      </view>
+
+      <view class="researchTable" wx:for="{{passList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view>
+          <view class="tableLeftOneTop">
+            <view>
+              班级
+            </view>
+            <view>
+              及格率
+            </view>
+          </view>
+          <view class="tableLeftOneBtm">
+            百分比
+          </view>
+        </view>
+        <view class="tableMain" wx:for="{{item}}" wx:for-index="idx" wx:for-item="child" wx:key="idx">
+          <view>{{classList[index][idx]}}</view>
+          <view>{{child.y}}</view>
+        </view>
+      </view>
+    </view>
+
+
+
+  </view>
+</view>

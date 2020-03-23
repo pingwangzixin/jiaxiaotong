@@ -1,0 +1,93 @@
+.wrongPage{
+	height: 100%;
+	background: #f5f5f5;
+	overflow: auto;
+}
+.wrongNav{
+	background: #ffffff;
+	height: 88rpx;
+	line-height: 88rpx;
+	text-align: center;
+	margin-bottom: 20rpx;
+	position: fixed;
+	width: 100%;
+}
+.back{
+	position: absolute;
+	left: 0;
+		height: 88rpx;
+	line-height: 88rpx;
+	bottom: 0;
+	width: 100rpx;
+
+}
+.back>image{
+	width: 32rpx;
+	height: 38rpx;
+	margin-top: 25rpx;
+}
+.section{
+	width: 280rpx;
+	margin: 0 auto;
+}
+.subFlagImg{
+	width: 25rpx;
+	height: 18rpx;
+}
+.wrongMain{
+	padding: 0 25rpx;
+}
+
+.question{
+	background: #fff;
+	border-radius: 20rpx;
+	margin-bottom: 20rpx;
+	padding: 30rpx;
+	font-size: 25rpx;
+}
+
+.questionDec{
+	line-height: 1;
+	margin-bottom: 37rpx;
+}
+.option>view{
+	line-height: 50rpx;
+	text-indent: 35rpx;
+}
+.answer{
+	border-top: 1rpx solid #ebebeb;
+	display: flex;
+	justify-content: space-between;
+	padding-top: 18rpx;
+}
+.answerShowChange image{
+	width: 30rpx;
+	height: 18rpx;
+	margin-left: 10rpx;
+}
+.answer>view:nth-child(1)>text{
+	font-size: 27rpx;
+}
+.answer>view:nth-child(2){
+	font-size: 21rpx;
+	color: #427dc5;
+}
+.analysis{
+	padding-top: 35rpx;
+}
+.analysis>view:nth-child(1){
+	margin-bottom: 40rpx;
+}
+.analysis>view:nth-child(2){
+	display: flex
+}
+.analysis>view:nth-child(2)>view:nth-child(1){
+	text-align: justify;
+	width: 100rpx;
+}
+.analysis>view:nth-child(2)>view:nth-child(1)::after{
+ width: 100%;
+  display: inline-block;
+  content: '';  
+}
+

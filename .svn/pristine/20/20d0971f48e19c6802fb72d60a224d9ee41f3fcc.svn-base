@@ -1,0 +1,172 @@
+.pageWrap{
+	height: 100%;
+  background: #373e51;
+}
+
+.resourcePage {
+  padding: 0 24rpx 0;
+  background: #373e51;
+  padding-bottom: 140rpx;
+}
+
+.tabWrapper {
+  width: 680rpx;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-around;
+  color: #fff;
+  line-height: 72rpx;
+  border-bottom: 1rpx solid #4a5474;
+}
+
+.tabWrapper>view {
+  padding: 0 15rpx;
+}
+
+.acticeTab {
+  color: #73ffe4;
+  background: #373e51;
+  border-bottom: 4rpx solid #73ffe4;
+}
+
+.numTitle {
+  font-size: 25rpx;
+  color: #fff;
+  margin-top: 23rpx;
+  margin-bottom: 30rpx;
+}
+.numLine{
+	position: relative;
+}
+.numLine  .resPie,.numLine  .examPie {
+  height: 480rpx;
+  width: 640rpx;
+  margin: 0 auto;
+}
+
+.resourceNumTable {
+  margin: 20rpx 0;
+}
+/* 数量遮挡 */
+.resourceNumWrapper{
+width: 160rpx;
+height: 50rpx;
+position: absolute;
+left: 170rpx;
+top: 140rpx;
+text-align: center;
+font-size: 39rpx;
+font-weight: 900;
+color: #fff;
+}
+.resourceNumWrapper>view:nth-child(2){
+	font-size: 20rpx;
+	font-weight: 500;
+}
+.resourceNumTable>view {
+  display: flex;
+  text-align: center;
+  line-height: 74rpx;
+  font-size: 24rpx;
+}
+
+.resourceNumTable>view>view:nth-of-type(1) {
+  width: 138rpx;
+  height: 74rpx;
+  background: #4d5673;
+  border: 1rpx solid #697082;
+  border-left: none;
+  border-bottom: none;
+  color: #7ee1d6;
+}
+
+.resourceNumTable>view>view:nth-of-type(2) {
+  width: 138rpx;
+  height: 74rpx;
+  background: #57607f;
+  border-top: 1rpx solid #697082;
+  flex-grow: 1;
+  color: #fff;
+}
+
+#tableTitle {
+  border-top: none;
+  background: #4d5673;
+  color: #7ee1d6;
+}
+
+.subTitle {
+  font-size: 25rpx;
+  color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.subLine{
+  height: 480rpx;
+  width: 640rpx;
+  margin: 0 auto;
+}
+.subTableWrpper{
+  margin: 10rpx 0 50rpx;
+  }
+
+.subTable{
+  display: flex;
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 22rpx;
+}
+.tableLeftOneTop{
+  width: 151rpx;
+  height: 63rpx;
+  color: #7ee1d6;
+  font-size: 19rpx;
+  background: #4d5673;
+  border-bottom: 1rpx solid #697082;
+ background-image: linear-gradient(21.4deg, transparent 49.5%, #697082 49.5%, #697082 50.5%, transparent 50.5%);
+}
+.tableLeftOneTop>view:nth-child(1){
+  text-align: right;
+  padding-right: 8rpx;
+  padding-top: 7rpx;
+}
+.tableLeftOneTop>view:nth-child(2){
+  text-align: left;
+  text-indent: 8rpx;
+}
+.examTableTop{
+	  background: #4d5673;
+  color: #7ee1d6;
+  height: 63rpx;
+  line-height: 63rpx;
+		width: 151rpx;
+  border-bottom: 1rpx solid #697082;
+
+}
+.tableLeftOneBtm{
+  background: #4d5673;
+  color: #7ee1d6;
+	width: 151rpx;
+	    height: 74rpx;
+  line-height: 74rpx
+}
+.tableTr{
+  width: 108rpx;
+}
+.tableTr>view:nth-child(1){
+  height: 63rpx;
+  line-height: 63rpx;
+  color: #7ee1d6;
+  background: #4d5673;
+  border-left: 1rpx solid #697082;
+  border-bottom: 1rpx solid #697082;
+
+}
+.tableTr>view:nth-child(2){
+  height: 74rpx;
+  line-height: 74rpx;
+  color: #fff;
+  background: #57607f;
+  border-left: 1rpx solid #697082;
+
+}

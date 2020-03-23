@@ -1,0 +1,43 @@
+/* component/parent/aboutUs/aboutUs.wxss */
+
+
+.aboutPage{
+  height: 100%;
+  background: #373e51;
+}
+.top{
+  padding-top: 46rpx;
+  text-align: center;
+  font-size: 22rpx;
+  color: #fff;
+}
+.top image{
+  height: 104rpx;
+  width: 104rpx;
+}
+.top>view:nth-of-type(1){
+    font-size: 25rpx;
+    margin: 22rpx auto 16rpx;
+}
+
+.decView{
+  font-size: 20rpx;
+  line-height: 32rpx;
+  color: #f6f6f7;
+  width: 650rpx;
+  margin: 33rpx auto 0;
+  text-indent: 55rpx;
+  letter-spacing: 2rpx;
+}
+.web,.copy,.jetsen{
+  color: #f6f6f7;
+    font-size: 20rpx;
+    text-align: center;
+}
+.web{
+  margin-top: 80rpx;
+}
+.copy{
+  margin: 230rpx auto 10rpx;
+
+}

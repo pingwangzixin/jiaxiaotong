@@ -1,0 +1,38 @@
+<!-- 导学提醒 -->
+<view class="details">
+
+  <view class="details-head">
+    <image class="head-pic" src="../../../../images/head.jpg"  />
+    <view class="head-info">
+      <text class="head-name">{{detailList.createUser}}</text>
+      <text class="head-day">{{detailList.updateDate}}</text>
+    </view>
+  </view>
+
+  <view class="details-content">
+    <view class="content-font">
+      <text class="font-big" space="nbsp">年       级:</text>
+      <text class="font-small">{{grade}}</text>
+    </view>
+    <view class="content-font">
+      <text class="font-big" space="nbsp">学       科:</text>
+      <text class="font-small">{{resultGather[4]}}</text>
+    </view>
+    <view class="content-font">
+      <text class="font-big" space="nbsp">章       节:</text>
+      <text class="font-small">{{resultGather[5]}}</text>
+    </view>
+    <view class="content-font">
+      <text class="font-big" space="nbsp">节       点:</text>
+      <text class="font-small">{{resultGather[6]}}</text>
+    </view>
+    <view class="content-font">
+      <text class="font-big">资源名称:</text>
+      <text class="font-small">{{detailList.title}}</text>
+    </view>
+  </view>
+
+  <view class="details-footer">
+    记得提醒孩子预习哦～
+  </view>
+</view>
